@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — S &amp; S | Naresh S × P V Akhila</title>
+  <meta name="description" content="Moments from the room — photos of Naresh S × P V Akhila, storytelling × stand-up comedy, Chennai." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ---------- Lightbox ---------- */
+      .gallery-item img { cursor: zoom-in; }
+      .lightbox {
+        position: fixed; inset: 0; z-index: 200;
+        display: flex; align-items: center; justify-content: center;
+        background: rgba(22, 18, 14, 0.94);
+        opacity: 0; visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      .lightbox.open { opacity: 1; visibility: visible; }
+      .lb-figure {
+        margin: 0; max-width: 90vw; max-height: 88vh;
+        display: flex; flex-direction: column; align-items: center;
+      }
+      .lb-figure img {
+        max-width: 90vw; max-height: 78vh; object-fit: contain;
+        border-radius: 10px; box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+      }
+      .lb-figure figcaption {
+        color: #f3ecdd; margin-top: 1rem; font-size: 0.95rem;
+        text-align: center; max-width: 80vw;
+      }
+      .lb-btn {
+        position: absolute; border: 1px solid rgba(243,236,221,0.35);
+        background: rgba(243,236,221,0.08); color: #f3ecdd;
+        border-radius: 50%; cursor: pointer;
+        display: flex; align-items: center; justify-content: center;
+        transition: background 0.25s ease;
+      }
+      .lb-btn:hover { background: rgba(243,236,221,0.22); }
+      .lb-close { top: 1.1rem; right: 1.3rem; width: 44px; height: 44px; font-size: 1.5rem; line-height: 1; }
+      .lb-prev, .lb-next { top: 50%; transform: translateY(-50%); width: 48px; height: 48px; font-size: 1.7rem; line-height: 1; }
+      .lb-prev { left: 1.1rem; }
+      .lb-next { right: 1.1rem; }
+      body.lb-open { overflow: hidden; }
+      @media (max-width: 680px) {
+        .lb-prev, .lb-next { width: 40px; height: 40px; font-size: 1.4rem; }
+        .lb-prev { left: 0.5rem; }
+        .lb-next { right: 0.5rem; }
+        .lb-figure img { max-height: 70vh; }
+      }
+    </style>
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html#home" class="brand" aria-label="S and S home">
+        <span class="brand-mark">S<span class="brand-x">&amp;</span>S</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#performers">Performers</a></li>
+          <li><a href="index.html#shows">Shows</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="index.html#feedback">Feedback</a></li>
+        </ul>
+      </nav>
+
+      <a href="index.html#book" class="btn btn-primary nav-cta">Book Us</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#performers">Performers</a>
+      <a href="index.html#shows">Shows</a>
+      <a href="gallery.html" aria-current="page">Gallery</a>
+      <a href="index.html#feedback">Feedback</a>
+      <a href="index.html#book" class="btn btn-primary">Book Us</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== GALLERY ===================== -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <p class="section-eyebrow reveal">Gallery</p>
+        <h1 class="section-title reveal">Moments from the room.</h1>
+        <p class="section-lede reveal">On stage, backstage, and everywhere in between.</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item g-tall reveal">
+            <img src="IMG_3731.jpg" alt="Show standee at the venue entrance — Blackbox, High On Events" loading="lazy" />
+          </div>
+          <div class="gallery-item g-tall reveal">
+            <img src="assets/duo.jpg" alt="Naresh S and P V Akhila together at the studio" loading="lazy" />
+          </div>
+          <div class="gallery-item g-wide reveal">
+            <img src="IMG_3720.jpg" alt="Audience members watching the show from wooden chairs" loading="lazy" />
+          </div>
+          <div class="gallery-item reveal">
+            <img src="IMG_3724.jpg" alt="Couple in the audience at the blackbox studio show" loading="lazy" />
+          </div>
+          <div class="gallery-item reveal">
+            <img src="IMG_3768.jpg" alt="Audience seated in a row at the live show" loading="lazy" />
+          </div>
+          <div class="gallery-item g-tall reveal">
+            <img src="IMG_3884.jpg" alt="P V Akhila performing storytelling, lying on the stage floor with the mic" loading="lazy" />
+          </div>
+          <div class="gallery-item g-tall reveal">
+            <img src="IMG_3851.jpg" alt="Naresh S performing stand-up on stage with the mic" loading="lazy" />
+          </div>
+          <div class="gallery-item reveal">
+            <img src="IMG_3841.jpg" alt="Audience member laughing mid-show" loading="lazy" />
+          </div>
+          <div class="gallery-item g-big reveal">
+            <img src="IMG_3945.jpg" alt="Naresh S, P V Akhila and the audience — full group photo" loading="lazy" />
+          </div>
+          <div class="gallery-item g-big reveal">
+            <img src="IMG_3955.jpg" alt="Full group photo of the cast and audience after the show" loading="lazy" />
+          </div>
+          <div class="gallery-item g-wide reveal">
+            <img src="IMG_3816.jpeg" alt="Audience laughing during the show" loading="lazy" />
+          </div>
+          <div class="gallery-item g-tall reveal">
+            <img src="WhatsApp Image 2026-10-11 at 22.32.51 (2).jpeg" alt="P V Akhila performing storytelling on stage at Gangsters Vibe" loading="lazy" />
+          </div>
+          <div class="gallery-item g-tall reveal">
+            <img src="WhatsApp Image 2026-10-11 at 22.29.01 (2).jpeg" alt="Naresh S performing stand-up at the High On Events studio" loading="lazy" />
+          </div>
+          <div class="gallery-item g-tall reveal">
+            <img src="WhatsApp Image 2026-10-11 at 22.32.52.jpeg" alt="P V Akhila performing with a microphone at an outdoor show" loading="lazy" />
+          </div>
+          <div class="gallery-item g-tall reveal">
+            <img src="WhatsApp Image 2026-10-11 at 22.29.02.jpeg" alt="Naresh S mid-set at the High On Events studio" loading="lazy" />
+          </div>
+          <div class="gallery-item g-wide reveal">
+            <img src="WhatsApp Image 2026-10-11 at 22.32.50.jpeg" alt="Naresh S and P V Akhila seated on stage with microphones" loading="lazy" />
+          </div>
+          <div class="gallery-item reveal">
+            <img src="IMG_3858.jpg" alt="Audience watching from the side of the stage" loading="lazy" />
+          </div>
+          <div class="gallery-item reveal">
+            <img src="IMG_3860.jpg" alt="Three audience members seated together" loading="lazy" />
+          </div>
+          <div class="gallery-item g-big reveal">
+            <img src="IMG_3900.jpg" alt="P V Akhila storytelling on stage before a seated audience at the High On Events studio" loading="lazy" />
+          </div>
+          <div class="gallery-item g-tall reveal">
+            <img src="WhatsApp Image 2026-10-11 at 22.29.01 (1).jpeg" alt="Naresh S performing stand-up on a red-curtain stage with marquee lights" loading="lazy" />
+          </div>
+          <div class="gallery-item g-tall reveal">
+            <img src="WhatsApp Image 2026-10-11 at 22.29.01.jpeg" alt="Naresh S mid-performance on a red-curtain stage with marquee lights" loading="lazy" />
+          </div>
+          <div class="gallery-item g-wide reveal">
+            <img src="WhatsApp Image 2026-10-11 at 22.32.51.jpeg" alt="P V Akhila storytelling on a dark stage with starry lights" loading="lazy" />
+          </div>
+          <div class="gallery-item g-wide reveal">
+            <img src="WhatsApp Image 2026-10-10 at 20.49.30 (1).jpeg" alt="Naresh S performing stand-up on a dark stage with starry lights" loading="lazy" />
+          </div>
+          <div class="gallery-item reveal">
+            <img src="WhatsApp Image 2026-10-11 at 22.32.50 (1).jpeg" alt="Naresh S and P V Akhila performing together on a red-curtain stage with marquee lights" loading="lazy" />
+          </div>
+        </div>
+
+        <p class="reveal" style="margin-top: 3rem; text-align: center;">
+          <a href="index.html#book" class="btn btn-primary">Book Us</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">S<span class="brand-x">&amp;</span>S</span>
+        <p>Stand-up Comedy × Storytelling · Chennai</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#shows">Shows</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#book">Book Us</a>
+      </div>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> S &amp; S · Naresh S × P V Akhila. All rights reserved.</p>
+  </footer>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lb-btn lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous image">&lsaquo;</button>
+    <figure class="lb-figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Next image">&rsaquo;</button>
+  </div>
+
+  <script>
+    (function () {
+      var items = Array.prototype.slice.call(document.querySelectorAll('.gallery-item img'));
+      if (!items.length) return;
+      var lb = document.getElementById('lightbox'),
+          lbImg = document.getElementById('lbImg'),
+          lbCap = document.getElementById('lbCap'),
+          idx = 0;
+      function show(i) {
+        idx = (i + items.length) % items.length;
+        lbImg.src = items[idx].getAttribute('src');
+        lbImg.alt = items[idx].alt;
+        lbCap.textContent = items[idx].alt;
+      }
+      function openLb(i) {
+        show(i);
+        lb.classList.add('open');
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lb-open');
+      }
+      function closeLb() {
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lb-open');
+      }
+      items.forEach(function (im, i) {
+        im.addEventListener('click', function () { openLb(i); });
+      });
+      document.getElementById('lbClose').addEventListener('click', closeLb);
+      document.getElementById('lbPrev').addEventListener('click', function (e) { e.stopPropagation(); show(idx - 1); });
+      document.getElementById('lbNext').addEventListener('click', function (e) { e.stopPropagation(); show(idx + 1); });
+      lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+      document.addEventListener('keydown', function (e) {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLb();
+        else if (e.key === 'ArrowLeft') show(idx - 1);
+        else if (e.key === 'ArrowRight') show(idx + 1);
+      });
+    })();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
